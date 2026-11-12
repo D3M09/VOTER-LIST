@@ -1,0 +1,73 @@
+{
+ "file": "101856_com_3_female_without_photo_1_2025-11-24.pdf",
+ "pages": 3,
+ "meta": {
+  "district": "বগুড়া",
+  "upazila": "সোনাতলা",
+  "total_voters": "১২",
+  "female_voters": "৩",
+  "area_no": "১৮৫৬",
+  "publish_date": "২৪/১১/২০২৫",
+  "region": "রাজশাহী",
+  "post_office": "সোনাতলা",
+  "postcode": "৫৮২৬",
+  "area_name": "রাণীরপাড়া (৭ নং ওয়ার্ড)"
+ },
+ "records": [
+  {
+   "serial": 1,
+   "serial_bn": "১",
+   "name": "মোছাঃ সহিদা বেগম",
+   "voter_no": "১০১৮৫৬০২৪২৫০",
+   "voter_no_digits": "101856024250",
+   "father": "বুলু শেখ",
+   "mother": "মোছাঃ জইমে বেগম",
+   "occupation": "গৃহিনী",
+   "dob": "১৫/০৩/১৯৮২",
+   "address": "বালুর পাড়া, কাবিলপুর, সোনাতলা, বগুড়া",
+   "page": 3,
+   "column": 1,
+   "status": "ok"
+  },
+  {
+   "serial": 2,
+   "serial_bn": "২",
+   "name": "মোছাঃ সালেহা বেগম",
+   "voter_no": "১০১৮৫৬০০০০০৩",
+   "voter_no_digits": "101856000003",
+   "father": "মোঃ ফজলু বেপারী",
+   "mother": "মোছাঃ রওশন আরা",
+   "occupation": "গৃহিনী",
+   "dob": "১৬/১০/১৯৮৯",
+   "address": "রাণীর পাড়া, সোনাতলা, বগুড়া",
+   "page": 3,
+   "column": 2,
+   "status": "ok"
+  },
+  {
+   "serial": 3,
+   "serial_bn": "৩",
+   "name": "মোছাঃ সুরভী আকতার",
+   "voter_no": "১০১৮৫৬০০০০০৪",
+   "voter_no_digits": "101856000004",
+   "father": "মোঃ আব্দুছ ছালাম খন্দকার",
+   "mother": "মোছাঃ পিয়ারা বেগম",
+   "occupation": "গৃহিনী",
+   "dob": "১৮/০২/১৯৯১",
+   "address": "রাণীর পাড়া, সোনাতলা, বগুড়া",
+   "page": 3,
+   "column": 3,
+   "status": "ok"
+  }
+ ],
+ "stats": {
+  "records": 3,
+  "active": 3,
+  "first_serial": 1,
+  "last_serial": 3,
+  "cancelled": [],
+  "duplicates": [],
+  "missing_serials": [],
+  "incomplete": []
+ }
+}
