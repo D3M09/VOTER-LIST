@@ -1,0 +1,5 @@
+data/
+*.sqlite
+*.sqlite3
+*.key
+*.log

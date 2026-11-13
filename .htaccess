@@ -1,0 +1,42 @@
+# VoterSearch — Apache hardening (InfinityFree-safe)
+AddDefaultCharset UTF-8
+ServerSignature Off
+Options -Indexes -MultiViews
+
+# Never serve raw index data, scripts, secrets or build artifacts.
+<IfModule mod_authz_core.c>
+  <FilesMatch "(?i)\.(db|sqlite|sqlite3|sql|lock|zip|py|md|txt|log|ini|bat|env|key|json|docx|bak|cfg|conf|map)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <IfModule mod_access_compat.c>
+    <FilesMatch "(?i)\.(db|sqlite|sqlite3|sql|lock|zip|py|md|txt|log|ini|bat|env|key|json|docx|bak|cfg|conf|map)$">
+      Order allow,deny
+      Deny from all
+    </FilesMatch>
+  </IfModule>
+</IfModule>
+
+# Only index.php, api/, assets/ are reachable. PHP auth guards the first two.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule (^|/)\. - [F,L,NC]
+  RewriteRule ^(?:data|tools|json|pdf|pdfs|coords)(?:/|$) - [F,L,NC]
+  RewriteRule ^config\.php$ - [F,L,NC]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow, noarchive"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "no-referrer"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType font/woff2 "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 7 days"
+</IfModule>
